@@ -52,7 +52,6 @@
         var numOption4;
         var numberOptions = [];
         var imageCrystal;
-        var gameOver = false;
 
         populateImagesAndNumbers();
     
@@ -78,14 +77,12 @@
                 numWins++;
                 $("#number-wins").text(numWins);
                 counter = 0;  
-                gameOver = true;             
             }
             else if (counter >= randomNumber) {
                 alert("You lost!");
                 numLosses++;
                 $("#number-losses").text(numLosses);
                 counter = 0;
-                gameOver = true;
             }
             if(counter === 0){
                 crystals.empty();
@@ -94,7 +91,6 @@
         });
 
         function populateImagesAndNumbers(){
-            console.log("gameOver = " + gameOver)
             randomNumber = Math.floor(Math.random()*(26)+50);
             numOption1 = Math.floor(Math.random()*(6)+15);
             numOption2 = Math.floor(Math.random()*(5)+10);
