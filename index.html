@@ -77,12 +77,14 @@
                 numWins++;
                 $("#number-wins").text(numWins);
                 counter = 0;  
+                $("#total-score").text(counter);
             }
             else if (counter >= randomNumber) {
                 alert("You lost!");
                 numLosses++;
                 $("#number-losses").text(numLosses);
                 counter = 0;
+                $("#total-score").text(counter);
             }
             if(counter === 0){
                 crystals.empty();
